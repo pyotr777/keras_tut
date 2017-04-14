@@ -21,13 +21,13 @@ RUN apt-get install -y python-numpy python-scipy python-pandas \
 RUN /usr/bin/python --version
 
 RUN pip install -U pip
-RUN pip install nose
-RUN pip install "ipython[notebook]"
+RUN pip install -U nose
 RUN pip install -U matplotlib
 RUN pip install -U Pillow
 RUN pip install -U Theano
 RUN pip install -U keras
 RUN pip install -U tensorflow
+RUN pip install -U jupyter
 
 WORKDIR /root
-CMD jupyter notebook --no-browser --ip=0.0.0.0
+CMD jupyter notebook --no-browser --ip=0.0.0.0 --allow-root
