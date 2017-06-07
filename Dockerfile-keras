@@ -31,4 +31,4 @@ RUN pip install -U html5lib==1.0b8
 RUN pip install -U jupyter
 
 WORKDIR /root
-CMD jupyter notebook --no-browser --ip=0.0.0.0 --allow-root
+CMD jupyter notebook --no-browser --ip=0.0.0.0 --allow-root --NotebookApp.token=""
