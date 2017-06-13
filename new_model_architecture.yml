@@ -1,0 +1,41 @@
+backend: !!python/unicode 'tensorflow'
+class_name: Sequential
+config:
+- class_name: Conv2D
+  config:
+    activation: tanh
+    activity_regularizer: null
+    batch_input_shape: !!python/tuple [null, 1, 28, 28]
+    bias_constraint: null
+    bias_initializer:
+      class_name: Zeros
+      config: {}
+    bias_regularizer: null
+    data_format: channels_first
+    dilation_rate: !!python/tuple [1, 1]
+    dtype: float32
+    filters: 32
+    kernel_constraint: null
+    kernel_initializer:
+      class_name: VarianceScaling
+      config: {distribution: uniform, mode: fan_avg, scale: 1.0, seed: null}
+    kernel_regularizer: null
+    kernel_size: !!python/tuple [3, 3]
+    name: conv2d_4
+    padding: valid
+    strides: !!python/tuple [1, 1]
+    trainable: true
+    use_bias: true
+- class_name: Lambda
+  config:
+    arguments: {}
+    function: !!python/tuple [!!python/unicode "c\x01\0\0\0\x01\0\0\0\x02\0\0\0C\0\
+        \0\0s\b\0\0\0|\0\0d\x01\0\x13S(\x02\0\0\0Ni\x02\0\0\0(\0\0\0\0(\x01\0\0\0\
+        t\x01\0\0\0x(\0\0\0\0(\0\0\0\0s\x1F\0\0\0<ipython-input-22-a397f5a67dd6>t\b\
+        \0\0\0<lambda>\x05\0\0\0s\0\0\0\0", null, null]
+    function_type: lambda
+    name: lambda_1
+    output_shape: null
+    output_shape_type: raw
+    trainable: true
+keras_version: 2.0.5
