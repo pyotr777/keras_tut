@@ -38,3 +38,4 @@ RUN pip install -U nose pygpu
 RUN pip install --upgrade --no-deps git+git://github.com/Theano/Theano.git --user
 RUN pip install -U keras
 RUN pip install -U jupyter[notebook]
+ENV KERAS_BACKEND=theano
